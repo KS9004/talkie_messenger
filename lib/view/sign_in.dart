@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:talkie/view/home.dart';
 import 'package:talkie/view/sign_up.dart';
 
 class SignIn extends GetWidget<AuthController> {
@@ -126,6 +127,7 @@ class SignIn extends GetWidget<AuthController> {
                             ),
                             child: MaterialButton(
                               onPressed: (){
+                                Get.to(Home());
                               },
                               child: Text("Log In",style:GoogleFonts.aBeeZee(
                                 textStyle: TextStyle(

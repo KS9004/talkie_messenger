@@ -1,5 +1,4 @@
 import 'package:talkie/controller/authBinding.dart';
-import 'package:talkie/view/home.dart';
 import 'package:talkie/view/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       initialBinding: AuthBinding(),
       debugShowCheckedModeBanner: false,
       title: 'Talkie',
-      home: Home(),
+      home: SignUp(),
 
     );
   }
