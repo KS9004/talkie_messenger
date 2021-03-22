@@ -1,10 +1,10 @@
-import 'package:talkie/controller/auth_controller.dart';
-import 'package:get/get.dart';
 
-class AuthBinding extends Bindings{
+import 'package:get/get.dart';
+import 'package:talkie/controller/userController.dart';
+class TalkieBinding extends Bindings{
+
   @override
   void dependencies() {
-    Get.lazyPut(() => AuthController());
+   Get.lazyPut(() => UserController());
   }
-  
 }

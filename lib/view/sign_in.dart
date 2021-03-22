@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:talkie/controller/auth_controller.dart';
+import 'package:talkie/controller/initController.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:talkie/view/home.dart';
 import 'package:talkie/view/sign_up.dart';
 
-class SignIn extends GetWidget<AuthController> {
+class SignIn extends GetWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   @override

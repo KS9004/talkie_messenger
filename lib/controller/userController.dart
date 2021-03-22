@@ -1,14 +1,13 @@
-import 'package:talkie/models/usermodel.dart';
 import 'package:get/get.dart';
+import 'package:talkie/models/usermodel.dart';
+import 'package:talkie/packages/userDatabase.dart';
 
-class UserController extends GetxController{
-  Rx<UserModel> _userModel = UserModel().obs;
+class UserController extends GetxController {
+  Rx<List<User>> userModel = Rx<List<User>>();
 
-  UserModel get user => _userModel.value;
+  List<User> get getUser =>userModel.value;
 
-  set user(UserModel value)=>this._userModel.value = value;
-
-  void clear(){
-    _userModel.value = UserModel();
+  void onInit(){
+    userModel.bindStream(UserDatabase().getUser());
   }
 }
