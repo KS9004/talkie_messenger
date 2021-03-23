@@ -4,8 +4,9 @@ class User {
   String email;
   int phoneNumber;
    String uMessage;
+   String messagetype;
 
-   User({this.title,this.email,this.phoneNumber,this.uMessage});
+   User({this.title,this.email,this.phoneNumber,this.uMessage,this.messagetype});
 
    User.fromDocumentSnpashot(DocumentSnapshot doc){
 
@@ -13,6 +14,7 @@ class User {
      email = doc.data()['email'];
      phoneNumber = doc.data()['phoneNumber'];
      uMessage = doc.data()['uMessage'];
+     messagetype = doc.data()['messageType'];
    }
 
 }

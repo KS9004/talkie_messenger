@@ -1,4 +1,4 @@
-import 'package:talkie/controller/initController.dart';
+import 'package:talkie/controller/userDataController.dart';
 import 'package:talkie/view/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

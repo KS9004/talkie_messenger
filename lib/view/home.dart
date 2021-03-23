@@ -58,12 +58,13 @@ class Home extends GetWidget {
         unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.message),
-          title: Text("Chats")),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
-            title: Text("Profile")
+            label: "Profile",
 
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.message),
+          label: "Chats",
           ),
         ],
       ),
