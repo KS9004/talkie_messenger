@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:talkie/controller/messageController.dart';
 import 'package:talkie/controller/userController.dart';
-import 'package:talkie/models/usermodel.dart';
 import 'package:talkie/utils/userDatabase.dart';
+import 'package:talkie/view/setting.dart';
 
 class ChatDetailsPage extends StatelessWidget {
   TextEditingController message = TextEditingController();
@@ -64,6 +63,7 @@ class ChatDetailsPage extends StatelessWidget {
                 IconButton(
                   icon: Icon(Icons.settings),
                   color: Colors.black54,
+                  onPressed: ()=>Get.to(Setting_Widget()),
                 ),
               ],
             ),

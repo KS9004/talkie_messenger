@@ -10,6 +10,7 @@ class UserController extends GetxController {
 
   Rx<List<MessageModel>> messageModel = Rx<List<MessageModel>>();
   List<MessageModel> get getMessage => messageModel.value;
+  RxBool offline = false.obs;
 
   void onInit(){
     userModel.bindStream(UserDatabase().getUser());
