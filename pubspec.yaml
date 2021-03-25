@@ -37,6 +37,7 @@ dependencies:
   firebase_core: ^1.0.1
   image_picker:
   settings_ui: ^0.6.0
+  koukicons: ^2.0.3
 
 
 dev_dependencies:
