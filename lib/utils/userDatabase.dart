@@ -2,6 +2,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:talkie/models/messageModel.dart';
+import 'package:talkie/models/userSetting.dart';
 import 'package:talkie/models/usermodel.dart';
 
 class UserDatabase {
@@ -21,6 +22,16 @@ class UserDatabase {
       List<User> retUserVal = [];
       querySnapshot.docs.forEach((element) {
         retUserVal.add(User.fromDocumentSnpashot(element));
+      });
+      return retUserVal;
+    });
+  }
+
+  Stream<List<UserSetting>> getUserInfo (){
+    return user.collection('user').snapshots().map((QuerySnapshot querySnapshot){
+      List<UserSetting> retUserVal = [];
+      querySnapshot.docs.forEach((element) {
+        retUserVal.add(UserSetting.fromDocumentSnpashot(element));
       });
       return retUserVal;
     });

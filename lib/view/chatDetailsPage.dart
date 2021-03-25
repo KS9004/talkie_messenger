@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:talkie/controller/userController.dart';
+import 'package:talkie/controller/userSettingController.dart';
 import 'package:talkie/utils/userDatabase.dart';
 import 'package:talkie/view/setting.dart';
 
@@ -52,11 +53,19 @@ class ChatDetailsPage extends StatelessWidget {
                       SizedBox(
                         height: 6,
                       ),
-                      Text(
-                        "Online",
-                        style: TextStyle(
-                            color: Colors.grey.shade600, fontSize: 13),
-                      ),
+                      Obx((){
+                        var statonline = Get.find<UserSettingController>().userSetting[0].onlineStatus;
+                       return statonline?Text(
+                          "Online",
+                          style: TextStyle(
+                              color: Colors.grey.shade600, fontSize: 13),
+                        ):Text(
+                         "Offline",
+                         style: TextStyle(
+                             color: Colors.grey.shade600, fontSize: 13),
+                       );
+
+                      }),
                     ],
                   ),
                 ),
